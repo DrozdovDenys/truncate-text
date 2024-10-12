@@ -19,10 +19,10 @@ function App() {
   const [maxRowsAmount, setMaxRowsAmount] = useState('1')
 
   return (
-    <div className="w-1/2 h-1/2 overflow-hidden p-4 top-0 right-0 left-0 bottom-0 absolute m-auto bg-slate-50">
+    <div className="w-1/2 overflow-hidden p-4 top-0 right-0 left-0 bottom-0 absolute m-auto bg-slate-50">
       <h1 className="text-center">Truncate Text</h1>
-      <div className="flex justify-between gap-20">
-        <section className="flex flex-col gap-3 basis-1/2 shrink-0">
+      <div className="flex justify-center gap-20 flex-wrap">
+        <section className="flex flex-col gap-3 basis-[40%] shrink-0">
           <label htmlFor="inputTextarea">Set max rows amount:</label>
           <input
             id="input"
@@ -61,8 +61,8 @@ function App() {
             cols={30}
           />
         </section>
-        <section className="flex flex-col gap-3 basis-1/2">
-          <h2>Truncated text result:</h2>
+        <section className="flex flex-col gap-3 basis-[40%] shrink-0">
+          <h2 className="m-0 text-nowrap">Truncated text result:</h2>
           <div className="border bg-white p-2 border-dashed border-red-300 relative pb-6">
             <TruncateText maxRowsAmount={Number(maxRowsAmount)}>
               <div className={`${fontSize}`}>{text}</div>
